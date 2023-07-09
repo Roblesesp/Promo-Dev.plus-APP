@@ -1,1 +1,0 @@
- var nativeShare = function() { if (navigator.share) { navigator.share({ title: "Dev.Plus", text: "Lleva tu desarrollo al siguiente nivel con Dev.Plus, la app definitiva para desarrolladores web en Android.", url: "https://roblesesp.github.io/Promo-Dev.plus-APP/", }) } return false; } 
