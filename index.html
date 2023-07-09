@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación de la Aplicación</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      text-decoration: none;
+      text-transform: none;
+      font-variant: normal;
+      font-style: normal;
+    }
+    html{
+      height: 100%;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: -webkit-linear-gradient(241deg, #4168cc, #474d87);
+      background: -moz-linear-gradient(241deg, #4168cc, #474d87);
+      background: -ms-linear-gradient(241deg, #4168cc, #474d87);
+      background: -o-linear-gradient(241deg, #4168cc, #474d87);
+      background: linear-gradient(241deg, #4168cc, #474d87);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      overflow: hidden;
+      display: block;
+    }
+
+    .app-image {
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 15px;
+    }
+
+    .app-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: rgb(255, 255, 255, .7);
+    }
+    .app-description{
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: rgb(255, 255, 255, .7);
+    }
+
+    .download-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .download-button:hover {
+      background-color: #2980b9;
+    }
+
+.slideshow-container {
+      position: relative;
+      max-width: 220px;
+      max-height: 460px;
+      margin: 0 auto;
+      padding: 10px;
+      background:#37474F ;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 0px 6px 3px rgb(255, 255, 255,.6); 
+      box-shadow: 0px 0px 6px 3px rgb(255, 255, 255,.6);
+    }
+
+    .slideshow-container img {
+      display: none;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+
+    
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="img/logo.png" alt="Logo Dev.plud" class="app-image">
+    <h1 class="app-name">Dev.Plus</h1>
+    <h3 class="app-description">
+      Lleva tu desarrollo al siguiente nivel con Dev.Plus, la app definitiva para desarrolladores web en Android. Únete a nuestra comunidad, accede al foro de HTML, CSS y JavaScript, interactúa con otros usuarios, encuentra plantillas profesionales, usa herramientas esenciales y potencia tu creatividad. Descarga Dev.Plus y lleva tus habilidades al siguiente nivel.
+    </h3>
+
+<div class="slideshow-container">
+    <img src="img/image1.jpeg" alt="Imagen 1" class="slide">
+    <img src="img/image2.jpeg" alt="Imagen 2" class="slide">
+    <img src="img/image3.jpeg" alt="Imagen 3" class="slide">
+  </div>
+   
+    <p>¡Descarga nuestra increíble aplicación ahora!</p>
+    <a href="Android-APP-Dev.Plus.apk" class="download-button">Descargar</a>
+    <a href="#" onclick="return nativeShare();" class="download-button">Compartir </a>
+  </div>
+
+
+ <script type="text/javascript" src="js/cambioimg.js"></script>
+<script type="text/javascript" src="js/compartir.js"></script>
+</body>
+</html>
