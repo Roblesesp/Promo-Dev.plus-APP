@@ -1,0 +1,1 @@
+ var nativeShare = function() { if (navigator.share) { navigator.share({ title: "Dev.Plus", text: "Lleva tu desarrollo al siguiente nivel con Dev.Plus, la app definitiva para desarrolladores web en Android.", url: "https://undproducer.com/", }) } return false; } 
