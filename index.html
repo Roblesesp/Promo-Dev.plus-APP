@@ -1,119 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Presentación de la Aplicación</title>
-  <style>
-    *{
-      box-sizing: border-box;
-      text-decoration: none;
-      text-transform: none;
-      font-variant: normal;
-      font-style: normal;
-    }
-    html{
-      height: 100%;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background: -webkit-linear-gradient(241deg, #4168cc, #474d87);
-      background: -moz-linear-gradient(241deg, #4168cc, #474d87);
-      background: -ms-linear-gradient(241deg, #4168cc, #474d87);
-      background: -o-linear-gradient(241deg, #4168cc, #474d87);
-      background: linear-gradient(241deg, #4168cc, #474d87);
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-      overflow: hidden;
-      display: block;
-    }
-
-    .app-image {
-      max-width: 150px;
-      height: auto;
-      margin-bottom: 20px;
-      border-radius: 15px;
-    }
-
-    .app-name {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: rgb(255, 255, 255, .7);
-    }
-    .app-description{
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: rgb(255, 255, 255, .7);
-    }
-
-    .download-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #3498db;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .download-button:hover {
-      background-color: #2980b9;
-    }
-
-.slideshow-container {
-      position: relative;
-      max-width: 220px;
-      max-height: 460px;
-      margin: 0 auto;
-      padding: 10px;
-      background:#37474F ;
-      border-radius: 5px;
-      -webkit-box-shadow: 0px 0px 6px 3px rgb(255, 255, 255,.6); 
-      box-shadow: 0px 0px 6px 3px rgb(255, 255, 255,.6);
-    }
-
-    .slideshow-container img {
-      display: none;
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-    }
-
-
-    
-
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Descargar app Dev.Plus</title>
+  <link rel="stylesheet" type="text/css" href="css/styl.css">
 </head>
 <body>
-  <div class="container">
-    <img src="logo.png" alt="Logo Dev.plud" class="app-image">
-    <h1 class="app-name">Dev.Plus</h1>
-    <h3 class="app-description">
-      Lleva tu desarrollo al siguiente nivel con Dev.Plus, la app definitiva para desarrolladores web en Android. Únete a nuestra comunidad, accede al foro de HTML, CSS y JavaScript, interactúa con otros usuarios, encuentra plantillas profesionales, usa herramientas esenciales y potencia tu creatividad. Descarga Dev.Plus y lleva tus habilidades al siguiente nivel.
-    </h3>
+<header>
+  <img src="img/logo.png" alt="Logo">
 
-<div class="slideshow-container">
-    <img src="image1.jpeg" alt="Imagen 1" class="slide">
-    <img src="image2.jpeg" alt="Imagen 2" class="slide">
-    <img src="image3.jpeg" alt="Imagen 3" class="slide">
+  
+  <button onclick="return nativeShare();">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+  <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+</svg>
+</button>
+<button onclick="mostrarAvisoDescarga()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+</svg>
+  </button>
+</header>
+<main>
+  
+  <section>
+    
+    <div class="caja">
+      <div class="butons">
+        <button id="btnSeccion1" onclick="mostrarSeccion(1)">APP</button>
+        <button id="btnSeccion2" onclick="mostrarSeccion(2)">DEV</button>
+      </div>
+      <div id="seccion1" class="section" style="display: block;">
+    <h2>¡Descubre Dev.Plus, tu compañero imprescindible para desarrolladores!</h2>
+    <p>Con nuestra aplicación Android creada con AppCreator24, tendrás acceso a un chat y foros dinámicos para interactuar con otros desarrolladores apasionados. Además, encontrarás una sección de herramientas y plantillas listas para impulsar tu creatividad.</p>
+    <p>
+      ¡Conecta, colabora y acelera tu camino hacia el éxito! Descarga Dev.Plus ahora y lleva tus habilidades al siguiente nivel.
+    </p>
   </div>
-   
-    <p>¡Descarga nuestra aplicación básica ahora!</p>
-    <a href="Android-APP-Dev.Plus.apk" class="download-button">Descargar</a>
-    <a href="#" onclick="return nativeShare();" class="download-button">Compartir </a>
+
+  <div id="seccion2" class="section" style="display:none;">
+    <h2>¡Hola a todos!</h2>
+    <p>Soy Sergio Daniel Robles, un apasionado autodidacta de la programación. Con más de 4 años de experiencia, domino HTML, CSS, JavaScript, PHP y MySQL.</p>
+    <p>¡Creo sitios web interactivos y funcionales!</p>
+    <p>Busco siempre nuevos desafíos y oportunidades para crecer y aprender en este apasionante campo. Me encanta colaborar en proyectos emocionantes y compartir mis conocimientos con otros desarrolladores.</p>
+    <p>
+      ¡Listo para seguir creando y dejando huella en el mundo de la programación!
+    </p>
+  </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="caja">
+      <div id="seccion3" class="section" style="display: block;">
+    <div class="slideshow-container">
+    <img src="img/image1.jpeg" alt="Imagen 1" class="slide">
+    <img src="img/image2.jpeg" alt="Imagen 2" class="slide">
+    <img src="img/image3.jpeg" alt="Imagen 3" class="slide">
+  </div>
   </div>
 
+  <div id="seccion4" class="section" style="display:none; text-align: center;">
+    <img class="dev" src="https://scontent-mad2-1.xx.fbcdn.net/v/t31.18172-8/18739032_10211529956918315_278961022403607492_o.jpg?_nc_cat=111&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=zc5ip9CxQKUAX84Ekh2&_nc_ht=scontent-mad2-1.xx&oh=00_AfDFdhPR5RSPGRcJIbPa5rYFws1cwr9pNlCBFBiWlqTcTw&oe=64DBAD64">
+  </div>
+    </div>
 
- <script type="text/javascript" src="cambioimg.js"></script>
-<script type="text/javascript" src="compartir.js"></script>
+  </section>
+</main>
+
+<script type="text/javascript" src="js/functions.js"> </script>
+
 </body>
 </html>
+
